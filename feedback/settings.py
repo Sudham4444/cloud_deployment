@@ -21,12 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'django-insecure-vj)n$djmgf3@&fq%jlyt2h3x0m&+_mew*xg6q-#*7mvu*-$wi$'
+# SECRET_KEY = 'django-insecure-vj)n$djmgf3@&fq%jlyt2h3x0m&+_mew*xg6q-#*7mvu*-$wi$'
+from decouple import config
+
+SECRET_KEY = config('DJANGO_SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = ['home.railway.app', '127.0.0.1']
+
 
 
 
@@ -119,6 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
