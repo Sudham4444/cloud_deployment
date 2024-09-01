@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,14 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-vj)n$djmgf3@&fq%jlyt2h3x0m&+_mew*xg6q-#*7mvu*-$wi$')
-# SECRET_KEY = 'django-insecure-vj)n$djmgf3@&fq%jlyt2h3x0m&+_mew*xg6q-#*7mvu*-$wi$'
+SECRET_KEY = 'django-insecure-vj)n$djmgf3@&fq%jlyt2h3x0m&+_mew*xg6q-#*7mvu*-$wi$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1']
-ALLOWED_HOSTS = ['.glitch.me', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 
@@ -122,7 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
