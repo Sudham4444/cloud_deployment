@@ -31,10 +31,10 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = ['127.0.0.1']
 # ALLOWED_HOSTS = ['home.railway.app', '127.0.0.1']
 
-
+ALLOWED_HOSTS = ['web-production-2a4f.up.railway.app', '127.0.0.1']
 
 
 # Application definition
